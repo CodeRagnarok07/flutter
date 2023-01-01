@@ -65,7 +65,6 @@ ejecuta el codigo con f5 y en la barra superior click en "open inspector page"
 
 # [widgets](https://docs.flutter.dev/development/ui/widgets)
 
-
 Text: representa un texto o cadena de caracteres. Admite diversos parámetros o propiedades, además del texto literal que será mostrado. Podemos definirle estilos y características de apariencia particulares.
 
 Row: permite organizar y posicionar otros widgets hijos en forma de fila o renglón.
@@ -88,3 +87,73 @@ FloatingActionButton
 - Container
 - Row
 - Column
+
+
+# android
+TIP: para evitar que el statusBar de Android se vea con un color más oscuro, habitual en este SO, podemos agregar al final de la clase MainActivity del archivo MainActivity.kt (ubicado en la carpeta src/main/kotlin/), la siguiente línea de código:
+
+this.getWindow().statusBarColor(android.graphics.Color.TRANSPARENT);
+
+...
+import 'package:flutter/services.dart';
+...
+  @override
+  Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([]);
+    ...
+  }
+}
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+void main(){
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light
+    )
+  );
+  runApp(MyApp());
+} 
+
+## usar el scroll en pc
+
+crear un widget:
+
+````dart
+
+import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
+
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
+  // Override behavior methods and getters like dragDevices
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+        // etc.
+      };
+}
+
+
+
+child: ScrollConfiguration(
+          behavior: MyCustomScrollBehavior(),
+          child: ListView(
+              padding: EdgeInsets.only(top: 20, left: 0, right: 40, bottom: 20),
+              scrollDirection: Axis.horizontal,
+              children: [
+                CardImg("assets/img/pags/01.jpg"),
+                CardImg("assets/img/pags/02.jpg"),
+                CardImg("assets/img/pags/03.jpg"),
+                CardImg("assets/img/pags/04.jpg"),
+                CardImg("assets/img/pags/01.jpg"),
+                CardImg("assets/img/pags/01.jpg"),
+                CardImg("assets/img/pags/01.jpg"),
+              ]),
+        ));
+
+```
+
+
