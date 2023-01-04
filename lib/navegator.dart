@@ -1,3 +1,4 @@
+import 'package:app1/acount/main.dart';
 import 'package:flutter/material.dart';
 
 import 'home/main.dart';
@@ -17,6 +18,7 @@ class _NavegatorState extends State<Navegator> {
     HomePage(),
     SearshPage(),
     MyApp00(),
+    AcountPage(),
   ];
 
   void onTapTapped(int index) {
@@ -40,6 +42,10 @@ class _NavegatorState extends State<Navegator> {
       icon: Icon(Icons.label),
       label: 'label',
     );
+    final account_circle = BottomNavigationBarItem(
+      icon: Icon(Icons.account_circle),
+      label: 'account_circle',
+    );
 
     return Scaffold(
         body: widgetsChildren[indexTap],
@@ -47,12 +53,14 @@ class _NavegatorState extends State<Navegator> {
           data: Theme.of(context)
               .copyWith(canvasColor: Colors.white, primaryColor: Colors.purple),
           child: BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
               onTap: onTapTapped,
               currentIndex: indexTap,
               items: [
                 home,
                 search,
                 label,
+                account_circle,
               ]),
         ));
   }
