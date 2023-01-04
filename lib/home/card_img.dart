@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'buttom_like.dart';
 
 class CardImg extends StatelessWidget {
   String img = "assets/img/pags/01.jpg";
@@ -7,7 +8,7 @@ class CardImg extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    final imgcard = Container(
       height: 250.0,
       width: 350.0,
       margin: const EdgeInsets.only(left: 20),
@@ -21,6 +22,10 @@ class CardImg extends StatelessWidget {
                 offset: Offset(0.7, 0.07),
                 color: Color.fromARGB(255, 0, 0, 0))
           ]),
+    );
+    return Stack(
+      alignment: Alignment(0.9, 1.1),
+      children: [imgcard, ButtomLike()],
     );
   }
 }
