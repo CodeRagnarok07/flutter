@@ -121,7 +121,7 @@ void main(){
 
 crear un widget:
 
-````dart
+```dart
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -156,4 +156,27 @@ child: ScrollConfiguration(
 
 ```
 
+
+
+# BlocProvider 
+[install](https://pub.dev/packages/generic_bloc_provider/install)
+
+```dart
+
+class MyApp extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+        return BlocProvider (
+            bloc: AppBloc(),
+            child: MaterialApp(
+                title: 'Yo Sleep',
+                home: MainPage(),
+                initialRoute: ‘main’,
+                routes: {
+                    'main': (context) => MainPage(),
+                }
+            ),
+        );
+    }
+}```
 

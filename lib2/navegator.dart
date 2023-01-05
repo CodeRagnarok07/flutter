@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:app1/App1/main.dart';
-import 'package:app1/Place/ui/screens/home_trips.dart';
-import 'package:app1/Place/ui/screens/search_trips.dart';
-import 'package:app1/User/ui/screens/profile_trips.dart';
-import 'App1/main.dart';
+import 'home/main.dart';
+import 'searsh/main.dart';
+import 'app_00/main.dart';
 
 class Navegator extends StatefulWidget {
   const Navegator({Key? key}) : super(key: key);
@@ -16,10 +14,9 @@ class Navegator extends StatefulWidget {
 class _NavegatorState extends State<Navegator> {
   int indexTap = 0;
   final List<Widget> widgetsChildren = [
-    HomeTrips(),
-    SearchTrips(),
-    ProfileTrips(),
-    ProfileTrips()
+    HomePage(),
+    SearshPage(),
+    MyApp00(),
   ];
 
   void onTapTapped(int index) {
