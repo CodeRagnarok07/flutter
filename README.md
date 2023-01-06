@@ -1,3 +1,5 @@
+flutter pub get
+
 # [online documentation](https://docs.flutter.dev/)
 
 A few resources to get you started if this is your first Flutter project:
@@ -178,5 +180,14 @@ class MyApp extends StatelessWidget {
             ),
         );
     }
-}```
+}
+```
 
+
+# db
+
+# Firebase
+
+1. https://firebase.google.com/docs/flutter/setup?platform=ios#available-plugins
+2. https://firebase.google.com/docs/firestore/quickstart#dart
+3. https://docs.flutter.dev/development/data-and-backend/firebase

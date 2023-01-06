@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "app1",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "app1 (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "app1 (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "Curso-de-Flutter-Avanzado-en-Platzi",
+            "cwd": "build\\Curso-de-Flutter-Avanzado-en-Platzi",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "Curso-de-Flutter-Avanzado-en-Platzi (profile mode)",
+            "cwd": "build\\Curso-de-Flutter-Avanzado-en-Platzi",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "Curso-de-Flutter-Avanzado-en-Platzi (release mode)",
+            "cwd": "build\\Curso-de-Flutter-Avanzado-en-Platzi",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

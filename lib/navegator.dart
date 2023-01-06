@@ -16,9 +16,9 @@ class Navegator extends StatefulWidget {
 class _NavegatorState extends State<Navegator> {
   int indexTap = 0;
   final List<Widget> widgetsChildren = [
+    ProfileTrips(),
     HomeTrips(),
     SearchTrips(),
-    ProfileTrips(),
     ProfileTrips()
   ];
 
@@ -30,6 +30,10 @@ class _NavegatorState extends State<Navegator> {
 
   @override
   Widget build(BuildContext context) {
+    final label = BottomNavigationBarItem(
+      icon: Icon(Icons.label),
+      label: 'label',
+    );
     final home = BottomNavigationBarItem(
       icon: Icon(Icons.home),
       label: 'home',
@@ -39,10 +43,7 @@ class _NavegatorState extends State<Navegator> {
       icon: Icon(Icons.search),
       label: 'search',
     );
-    final label = BottomNavigationBarItem(
-      icon: Icon(Icons.label),
-      label: 'label',
-    );
+
     final account_circle = BottomNavigationBarItem(
       icon: Icon(Icons.account_circle),
       label: 'account_circle',

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:app1/Place/ui/widgets/card_image.dart';
-import 'package:app1/widgets/scroll_behavior.dart';
+import 'package:app1/components/scroll_behavior.dart';
 
 class CardImageList extends StatelessWidget {
   @override
